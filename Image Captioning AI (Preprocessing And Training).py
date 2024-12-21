@@ -6,10 +6,10 @@ import torch
 import pandas as pd
 import os
 
-# Bagian preprocessing txt sama image2 nya (udah berhasil)
+# Bagian preprocessing dataset Flickr8k nya (udah berhasil)
 
-caption_file = r"C:\Users\FELIX\Downloads\archive\captions.txt"
-image_folder = r"C:\Users\FELIX\Downloads\archive\Images"
+caption_file = r"C:\Users\FELIX\Downloads\archive\captions.txt" # Bisa diganti sama path dari dataset Flickr8k masing-masing
+image_folder = r"C:\Users\FELIX\Downloads\archive\Images" # Bisa diganti sama path dari dataset Flickr8k masing-masing
 
 processor = ViTImageProcessor.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 tokenizer = AutoTokenizer.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
