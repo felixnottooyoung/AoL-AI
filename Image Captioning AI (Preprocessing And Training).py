@@ -48,8 +48,11 @@ dataset = dataset.map(preprocess_data, remove_columns=["image", "caption"])
 
 dataset = dataset.train_test_split(test_size=0.1)
 
-# Bagian training pakai Flickr8k untuk ningkatin akurasi model ViT-GPT-2 nya
-# Catatan : Masih gagal, jadinya pakai model ViT-GPT-2 yang udah di-fine tune pakai Flickr8k juga sama orang lain di website HuggingFace untuk deskripsiin gambar di app nya
+# Bagian training pakai Flickr8k untuk ningkatin akurasi model (fine-tune) ViT-GPT-2 nya
+''' Catatan : Masih gagal + sering bikin ngelag + waktu udah mepet,
+    jadi kita pakai model ViT-GPT-2 yang udah
+    difine-tune pakai Flickr8k juga sama orang lain di website HuggingFace
+    untuk deskripsiin gambar di app nya '''
 
 model = VisionEncoderDecoderModel.from_pretrained("nlpconnect/vit-gpt2-image-captioning")
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
