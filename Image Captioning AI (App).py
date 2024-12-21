@@ -58,7 +58,6 @@ class ImageCaptioningAIApp:
         self.image_label.config(image=self.current_image)
         self.image_label.image = self.current_image
         
-
     def generate_caption(self):
         if not self.image_path:
             messagebox.showwarning("Warning", "Please upload an image first!")
