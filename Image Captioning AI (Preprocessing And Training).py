@@ -48,7 +48,7 @@ dataset = dataset.map(preprocess_data, remove_columns=["image", "caption"])
 
 dataset = dataset.train_test_split(test_size=0.1)
 
-# Bagian training pakai Flickr8k untuk ningkatin akurasi model (fine-tune) ViT-GPT-2 nya
+# Bagian training pakai Flickr8k untuk ningkatin akurasi (fine-tune) model ViT-GPT-2 nya
 ''' Catatan : Masih gagal + sering bikin ngelag + waktu udah mepet,
     jadi kita pakai model ViT-GPT-2 yang udah
     di-fine-tune pakai Flickr8k sama orang lain di website HuggingFace
