@@ -6,7 +6,7 @@ import torch
 import pandas as pd
 import os
 
-# Bagian preprocessing dataset Flickr8k nya (udah berhasil)
+# Bagian preprocessing dataset Flickr8k nya (Berhasil)
 
 caption_file = r"C:\Users\FELIX\Downloads\archive\captions.txt" # Bisa diganti sama path dari dataset Flickr8k masing-masing
 image_folder = r"C:\Users\FELIX\Downloads\archive\Images" # Bisa diganti sama path dari dataset Flickr8k masing-masing
@@ -103,6 +103,6 @@ trainer = Seq2SeqTrainer(
 # Jalankan training untuk fine tuning ViT-GPT-2 nya pakai Flickr8k
 trainer.train()
 
-# Simpan versi fine tuned nya ke komputer (untuk kasus ini pake path laptopku, tapi bisa ganti dengan path yang lain)
+# Simpan model ViT-GPT-2 yang udah di-fine-tune ke komputer (Untuk kasus ini pake path laptopku, tapi bisa diganti dengan path yang lain)
 model.save_pretrained(r"C:\Users\FELIX\Downloads\archive")
 tokenizer.save_pretrained(r"C:\Users\FELIX\Downloads\archive")
